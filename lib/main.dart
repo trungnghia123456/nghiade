@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'QuoteClass.dart';
+import 'QuoteCard.dart';
 void main() {
   runApp(MaterialApp(
     home: QuoteList()
@@ -21,28 +22,6 @@ class _QuoteListState extends State<QuoteList> {
     QuoteClass("Sinh", "hoc sinh lầm lì nguy hiểm",'https://scontent-sin6-2.xx.fbcdn.net/v/t1.6435-9/150250573_501314531302924_9151686609406618298_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=174925&_nc_ohc=op1-LlMHER8AX__SVJN&_nc_ht=scontent-sin6-2.xx&oh=1d045dcc0de071345a73704dbce36d62&oe=60E880DC')
   ];
 
-  Widget CustomList(QuoteClass quote){
-    return Card(
-      margin: EdgeInsets.fromLTRB(5, 15, 5, 0),
-      child: Row(
-
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          CircleAvatar(backgroundImage: NetworkImage(quote.url),radius: 50.0,),
-          
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              
-              Text(quote.author,style: TextStyle(fontSize: 15.0,color: Colors.green),),
-              Text(quote.quote,style: TextStyle(fontSize: 13.0,color: Colors.orange),)
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +34,7 @@ class _QuoteListState extends State<QuoteList> {
         color: Colors.grey[500],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: listData.map((e) => CustomList(e)).toList()
+          children: listData.map((e) => QuoteCard(e)).toList()
         ),
       ),
     );
