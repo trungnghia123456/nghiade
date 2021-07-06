@@ -32,15 +32,14 @@ class _QuoteListState extends State<QuoteList> {
       body: Container(
         padding: EdgeInsets.all(40),
         color: Colors.grey[500],
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: listData.map((e) => QuoteCard(
-             quote: e,
-              delete:(){setState(() {
-                listData.remove(e);
-              });}
-          )).toList()
-        ),
+       child: ListView(
+           children: listData.map((e) => QuoteCard(
+               quote: e,
+               delete: (){setState(() {
+                 listData.remove(e);
+               });}
+           )).toList()
+       ),
       ),
     );
   }
