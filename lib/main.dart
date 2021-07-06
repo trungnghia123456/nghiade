@@ -7,9 +7,15 @@ void main() {
   ));
 }
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  int clickTime=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,10 +53,18 @@ class Profile extends StatelessWidget {
               Text('nguyentrungnghia19720@gmail.com',style: TextStyle(color: Colors.white,fontSize: 15.0,letterSpacing: 1.0),),
             ],
           )
+          ,Text('Time Click: $clickTime',style: TextStyle(color: Colors.pinkAccent,fontSize: 20.0),)
         ],
 
       ),
-      )
+      ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: (){
+              setState(() {
+                clickTime++;
+              });
+            },
+        child: Text('click \n me'),),
     );
   }
 }
