@@ -1,5 +1,3 @@
-import 'package:day1/explore/home.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:day1/explore/typeofcommodation.dart';
 
