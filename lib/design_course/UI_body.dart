@@ -17,31 +17,47 @@ class _UIBodyState extends State<UIBody> {
   String _searchValue = '';
   List<CourseData1> listData = [
     CourseData1(
-        courseName: 'User interface \n Design',
+        courseName: 'User interface \n Design1',
         lesson: 24,
         price: 25,
-        rating: 4.3,url: 'https://mondaycareer.com/wp-content/uploads/2020/11/anime-l%C3%A0-g%C3%AC-vampire.jpg'),
+        rating: 4.3,
+        url:
+            'https://mondaycareer.com/wp-content/uploads/2020/11/anime-l%C3%A0-g%C3%AC-vampire.jpg'),
     CourseData1(
-        courseName: 'User interface \n Design',
+        courseName: 'User interface \n Design2',
         lesson: 22,
         rating: 4.6,
-        price: 180,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-oSNc6V--7BvngSQEt7J2UHvqOmFvCGQfWg&usqp=CAU'),
+        price: 180,
+        url:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-oSNc6V--7BvngSQEt7J2UHvqOmFvCGQfWg&usqp=CAU'),
     CourseData1(
-        courseName: 'User interface \n Design',
+        courseName: 'User interface \n Design3',
         lesson: 24,
         price: 25,
-        rating: 4.3,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR65ecLHtUYXZIq8JPDbQLaMtkXmN21zTz4pw&usqp=CAU'),
+        rating: 4.3,
+        url:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR65ecLHtUYXZIq8JPDbQLaMtkXmN21zTz4pw&usqp=CAU'),
     CourseData1(
-        courseName: 'User interface \n Design',
+        courseName: 'User interface \n Design4',
         lesson: 22,
         price: 18,
-        rating: 4.6,url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdZTtK6pHqjvMrFvkwyTP_WgXYLrSAdna_8w&usqp=CAU')
+        rating: 4.6,
+        url:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdZTtK6pHqjvMrFvkwyTP_WgXYLrSAdna_8w&usqp=CAU')
   ];
 
-  var newData =
-      new CourseData2(courseName: 'App Design Course', lesson: 12, rating: 4.8,url: 'https://i1.sndcdn.com/artworks-IWwBrmuYh1pXatg1-Mwoq7A-t500x500.jpg');
-  var newData2 =
-      CourseData2(courseName: 'Wed Design Course', lesson: 28, rating: 4.9,url:'https://kenh14cdn.com/zoom/320_200/203336854389633024/2020/12/9/photo1607499675831-16074996760221262205174.jpg');
+  var newData = new CourseData2(
+      courseName: 'App Design Course',
+      lesson: 12,
+      rating: 4.8,
+      url:
+          'https://i1.sndcdn.com/artworks-IWwBrmuYh1pXatg1-Mwoq7A-t500x500.jpg');
+  var newData2 = CourseData2(
+      courseName: 'Wed Design Course',
+      lesson: 28,
+      rating: 4.9,
+      url:
+          'https://kenh14cdn.com/zoom/320_200/203336854389633024/2020/12/9/photo1607499675831-16074996760221262205174.jpg');
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +115,7 @@ class _UIBodyState extends State<UIBody> {
               scrollDirection: Axis.horizontal,
               itemCount: listData.length,
               itemBuilder: (BuildContext context, int index) {
-                return HorizonalCardData(courseData: listData[index]);
+                return Hero(tag: 'container-${listData[index].courseName}',child: HorizonalCardData(courseData: listData[index]));
               },
             ),
           ),

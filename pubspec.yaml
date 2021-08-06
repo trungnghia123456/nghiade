@@ -38,6 +38,8 @@ dependencies:
   floating_bottom_navigation_bar: ^1.5.2
   fradio: ^1.0.1
   percent_indicator: ^3.0.1
+  liquid_progress_indicator_ns: ^1.0.0
+  water_drop_nav_bar: ^2.0.0
 
 dev_dependencies:
   flutter_test:

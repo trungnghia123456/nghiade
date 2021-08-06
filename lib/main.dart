@@ -1,10 +1,10 @@
-import 'package:day1/design_course/UI.dart';
-import 'package:day1/test.dart';
+import 'package:day1/diet_plan/myDiary.dart';
 import 'package:flutter/material.dart';
-import 'explore/home.dart';
-import 'test.dart';
+import 'diet_plan/shared/playIcon.dart' as globals;
 
-void main() {
+
+ main() {
+ 
   runApp(MyApp());
 }
 
@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: UIDesignCourse(
-      title: 'Design Course',
-    ));
+      home: MyDiary(),
+      //   home: UIDesignCourse(
+      // title: 'Design Course',
+    );
 
     // return MaterialApp(
     //     home: MyHomePage(
